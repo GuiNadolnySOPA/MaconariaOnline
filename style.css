@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222; 
+    color: #fff; 
+}
+header {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    color: #ff0000; 
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    background-image: url('banner.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.content {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #111; 
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background-color: #333; 
+}
+
+.image-container {
+    margin-bottom: 2rem;
+}
+
+.image-container img {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    transform: scale(1.1); 
+    color: #ff0000; 
+}
+/* Adicionando efeitos de interatividade às imagens na galeria */
+.image-container {
+    margin-bottom: 2rem;
+    position: relative; /* Adicionando posição relativa para posicionamento dos elementos filhos */
+    overflow: hidden; /* Escondendo o overflow para evitar que a borda redonda seja cortada */
+}
+
+.image-container img {
+    width: 300px; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Adicionando transição para suavizar o efeito de escala */
+}
+
+/* Efeito de escala ao passar o mouse sobre as imagens */
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Efeito de aumento de tamanho ao clicar nas imagens */
+.image-container img.clicked {
+    position: absolute; /* Posicionando a imagem clicada absolutamente */
+    top: 0;
+    left: 0;
+    width: 100%; /* Tornando a imagem clicada do tamanho do seu contêiner pai */
+    height: auto;
+    z-index: 1000; /* Colocando a imagem clicada acima das outras */
+    cursor: zoom-out; /* Mudando o cursor para indicar que a imagem pode ser fechada */
+}
+/* Adicionando a logo no cabeçalho */
+header img {
+    width: 200px; /* Definindo a largura da logo */
+    height: auto; /* Mantendo a proporção da logo */
+    position: absolute; /* Posicionando a logo absolutamente */
+    top: 1rem; /* Afastando a logo da parte superior */
+    left: 1rem; /* Afastando a logo da parte esquerda */
+}

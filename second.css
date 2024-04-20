@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+.red-text {
+    color: red;
+}
